@@ -1,3 +1,8 @@
+import hendlers.TokenHandlerNumberImpl;
+import hendlers.TokenHandlerSeparatorImpl;
+import hendlers.TokenHandlerWordImpl;
+import observer.TokenizerObservable;
+
 /**
  * Created by Viktor on 14.11.2016.
  */

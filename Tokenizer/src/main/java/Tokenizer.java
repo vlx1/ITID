@@ -1,6 +1,10 @@
-import sun.security.jgss.spnego.NegTokenInit;
+import observer.TokenHandler;
+import observer.TokenizerObservable;
+import tokens.Number;
+import tokens.Separator;
+import tokens.Token;
+import tokens.Word;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;

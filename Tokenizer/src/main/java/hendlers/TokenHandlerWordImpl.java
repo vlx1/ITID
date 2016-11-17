@@ -1,3 +1,9 @@
+package hendlers;
+
+import observer.TokenHandler;
+import tokens.Token;
+import tokens.Word;
+
 /**
  * Created by Viktor on 14.11.2016.
  */

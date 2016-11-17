@@ -1,3 +1,5 @@
+package tokens;
+
 /**
  * Created by Viktor on 14.11.2016.
  */

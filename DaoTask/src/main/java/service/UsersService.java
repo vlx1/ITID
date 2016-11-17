@@ -26,4 +26,13 @@ public class UsersService implements UserService {
         }
         return false;
     }
+
+    public void addUser(User user) throws IOException {
+        usersDao.save(user);
+    }
+
+    public User getUser(int id) throws IOException {
+        //verifier.userExist(id);
+        return usersDao.find(id);
+    }
 }

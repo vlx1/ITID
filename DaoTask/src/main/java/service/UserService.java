@@ -1,5 +1,7 @@
 package service;
 
+import model.User;
+
 import java.io.IOException;
 
 /**
@@ -7,4 +9,7 @@ import java.io.IOException;
  */
 public interface UserService {
     boolean isRegistered(String name) throws IOException;
+    void addUser(User user) throws IOException;
+    User getUser(int id) throws IOException;
+
 }

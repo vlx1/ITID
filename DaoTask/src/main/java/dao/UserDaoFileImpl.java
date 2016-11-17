@@ -11,10 +11,12 @@ import java.io.IOException;
 /**
  * Created by Viktor on 15.11.2016.
  */
-public class UserDaoArrayListImpl implements UserDao {
+public class UserDaoFileImpl implements UserDao {
     List<User> users;
-    private final String path = "C:\\Users\\Viktor\\Downloads\\userText.txt";
-    public UserDaoArrayListImpl() throws IOException {
+    private final String path = "C:\\Users\\Viktor\\Desktop\\ITIS\\DaoTask\\src\\main\\resources\\fileUsers";
+
+
+    public UserDaoFileImpl() throws IOException {
         this.users = this.findAll();
     }
 
@@ -24,7 +26,7 @@ public class UserDaoArrayListImpl implements UserDao {
         String line;
         ArrayList<User> userArrayList = new ArrayList<User>();
         while ((line = fin.readLine()) != null) {
-            System.out.println(line);
+            //System.out.println(line);
             String[] lines = line.split(" ");
             User newUser = new User(Integer.parseInt(lines[0]), lines[1], lines[2], lines[3]);
             userArrayList.add(newUser);
