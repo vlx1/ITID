@@ -11,5 +11,6 @@ public interface UserService {
     boolean isRegistered(String name) throws IOException;
     void addUser(User user) throws IOException;
     User getUser(int id) throws IOException;
+    void updateUser(User user) throws IOException;
 
 }

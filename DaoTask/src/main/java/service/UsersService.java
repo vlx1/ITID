@@ -31,6 +31,10 @@ public class UsersService implements UserService {
         usersDao.save(user);
     }
 
+    public void updateUser(User user) throws IOException {
+        usersDao.update(user);
+    }
+
     public User getUser(int id) throws IOException {
         //verifier.userExist(id);
         return usersDao.find(id);
