@@ -1,17 +1,17 @@
-import dao.UserDao;
-import dao.UserDaoFileImpl;
 import factories.ServiceFactory;
+import model.User;
 import org.junit.Before;
 import org.junit.Test;
 import service.UserService;
-import service.UsersService;
+
+import java.io.IOException;
 
 import static junit.framework.TestCase.assertEquals;
 
 /**
- * Created by Viktor on 17.11.2016.
+ * Created by Viktor on 18.11.2016.
  */
-public class isRegisteredTest {
+public class setTest {
     private UserService testingUsersService;
 
     @Before
@@ -20,12 +20,10 @@ public class isRegisteredTest {
     }
 
     @Test
-    public void testIsRegistered() throws Exception{
-        boolean expected = true;
+    public void testGetUser() throws IOException {
+        User expected = new User(1, "Alexander", "alex_killa", "killa");
+        User actual = testingUsersService.getUser(1);
 
-        boolean actual = testingUsersService.isRegistered("Boris");
-
-        assertEquals(expected, actual);
+        assertEquals(expected,actual);
     }
-
 }
