@@ -30,7 +30,7 @@ public class ConnectionFactory {
         properties = new Properties();
         try {
             properties.load(new FileInputStream
-                    ("C:\\Users\\Viktor\\IdeaProjects\\AutoRussia\\src\\main\\resources\\application.properties"));
+                    ("C:\\Users\\Viktor\\Desktop\\ITIS\\AutoRussia\\src\\main\\resources\\application.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }

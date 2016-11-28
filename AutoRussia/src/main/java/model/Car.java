@@ -1,6 +1,6 @@
 package model;
 
-import com.oracle.webservices.internal.api.databinding.Databinding;
+//import com.oracle.webservices.internal.api.databinding.Databinding;
 
 /**
  * Created by Viktor on 20.11.2016.

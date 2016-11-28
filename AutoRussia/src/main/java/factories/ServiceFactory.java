@@ -26,7 +26,7 @@ public class ServiceFactory {
     private ServiceFactory() {
         try {
             properties = new Properties();
-            properties.load(new FileInputStream("C:\\Users\\Viktor\\IdeaProjects\\AutoRussia\\src\\main\\resources\\application.properties"));
+            properties.load(new FileInputStream("C:\\Users\\Viktor\\Desktop\\ITIS\\AutoRussia\\src\\main\\resources\\application.properties"));
             String serviceClassName = properties.getProperty("service.class");
             Constructor constructor = Class.forName(serviceClassName).getConstructor(OwnerDao.class, CarDao.class);
             service = (UsersAndAutosService) constructor.newInstance(OwnersDaoFactory.getInstance().getOwnerDao(), CarsDaoFactory.getInstance().getCarDao());
