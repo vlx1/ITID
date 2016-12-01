@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 /**
  * Created by Viktor on 26.11.2016.
  */
@@ -8,14 +10,21 @@ public class Owner {
     private String name;
     private int age;
     private String city;
-
-
+    private ArrayList<Car> cars;
 
     public Owner(int id, String name, int age, String city) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.city = city;
+    }
+
+    public Owner(int id, String name, int age, String city, ArrayList<Car> cars) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.city = city;
+        this.cars = cars;
     }
 
     public Owner(Builder builder) {

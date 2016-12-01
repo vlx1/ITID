@@ -27,7 +27,7 @@ public class ServiceFactory {
             properties.load(new FileInputStream("C:\\Users\\Viktor\\Desktop\\ITIS\\AutosAndOwners\\src\\main\\resources\\application.properties"));
             String serviceClassName = properties.getProperty("service.class");
             Constructor constructor = Class.forName(serviceClassName).getConstructor(OwnersDao.class, CarsDao.class);
-            service = (UaOService) constructor.newInstance(OwnersDaoFactory.getInstance().getOwnerDao(), CarsDaoFactory.getInstance().getCarDao());
+            service = (UaOService) constructor.newInstance(OwnersDaoDSFactory.getInstance().getOwnersDao(), CarsDaoDSFactory.getInstance().getCarsDao());
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
