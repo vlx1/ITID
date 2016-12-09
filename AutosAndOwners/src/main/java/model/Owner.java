@@ -12,6 +12,9 @@ public class Owner {
     private String city;
     private ArrayList<Car> cars;
 
+    public Owner() {
+    }
+
     public Owner(int id, String name, int age, String city) {
         this.id = id;
         this.name = name;

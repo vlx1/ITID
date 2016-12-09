@@ -23,7 +23,7 @@ public class OwnersDaoDSFactory {
     private OwnersDaoDSFactory(){
         properties = new Properties();
         try {
-            properties.load(new FileInputStream("src/main/resources/application.properties"));
+            properties.load(new FileInputStream("C:\\Users\\Viktor\\Desktop\\ITIS\\AutosAndOwners\\src\\main\\resources\\application.properties"));
             String daoOwnersClassName = properties.getProperty("owners.dao.class");
             Constructor constructor = Class.forName(daoOwnersClassName).getConstructor(DataSource.class);
             ownersDao = (OwnersDao) constructor.newInstance(DataSourceFactory.getInstance().getDataSource());

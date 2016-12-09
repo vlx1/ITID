@@ -20,6 +20,11 @@ public class UaOServiceImpl implements UaOService {
         this.carDao = carDao;
     }
 
+    public List<Owner> getAllUsers() throws IOException {
+        List<Owner> owners = ownerDao.findAll();
+        return owners;
+    }
+
     public boolean isOwnerRegistered(String name) throws IOException {
         List<Owner> owners = ownerDao.findAll();
 
